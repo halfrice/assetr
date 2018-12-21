@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AssetsComponent } from './assets/assets.component';
+import { AssetDetailComponent } from './asset-detail/asset-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AssetsComponent
+    AssetsComponent,
+    AssetDetailComponent
   ],
   imports: [
     AppRoutingModule,

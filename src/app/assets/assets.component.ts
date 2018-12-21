@@ -9,7 +9,7 @@ import { ASSETS } from '../mock-assets';
 })
 export class AssetsComponent implements OnInit {
   assets = ASSETS;
-  currentAsset: Asset;
+  selectedAsset: Asset;
 
   constructor() { }
 
@@ -17,6 +17,6 @@ export class AssetsComponent implements OnInit {
   }
 
   onSelect(asset: Asset): void {
-    this.currentAsset = asset;
+    this.selectedAsset= asset;
   }
 }

@@ -1,17 +1,9 @@
-<div *ngIf="currentAsset">
-  <h2>{{currentAsset.name | uppercase}} Details</h2>
-  <div><span>ID: </span>{{currentAsset.id}}</div>
-  <div>
-    <label>Name:
-      <input [(ngModel)]="currentAsset.name" placeholder="name">
-    </label>
-  </div>
-</div>
-
 <h2>Current Assets</h2>
 <ul class="assets">
   <li *ngFor="let asset of assets"
-    [class.selected]="asset === currentAsset" (click)="onSelect(asset)">
+    [class.selected]="asset === selectedAsset" (click)="onSelect(asset)">
     <span class="badge">{{asset.id}}</span>{{asset.name}}
   </li>
 </ul>
+
+<app-asset-detail [asset]="selectedAsset"></app-asset-detail>
