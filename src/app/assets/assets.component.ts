@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Asset } from '../asset';
+import { ASSETS } from '../mock-assets';
 
 @Component({
   selector: 'app-assets',
@@ -7,14 +8,15 @@ import { Asset } from '../asset';
   styleUrls: ['./assets.component.scss']
 })
 export class AssetsComponent implements OnInit {
-  asset: Asset = {
-    id: 1,
-    name: '007'
-  }
+  assets = ASSETS;
+  currentAsset: Asset;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(asset: Asset): void {
+    this.currentAsset = asset;
+  }
 }
